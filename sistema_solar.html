@@ -1,0 +1,350 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Sistema Solar</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #080d20;
+            color: white;
+        }
+
+        header {
+            background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.7)),
+            url("https://images.unsplash.com/photo-1462331940025-496dfbfc7564");
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        header h1 {
+            font-size: 50px;
+            color: #ffd166;
+            margin-bottom: 20px;
+        }
+
+        header p {
+            font-size: 19px;
+            max-width: 700px;
+            margin: auto;
+            line-height: 1.7;
+        }
+
+        nav {
+            background: #111a36;
+            padding: 18px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 12px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ffd166;
+        }
+
+        .introduccion {
+            text-align: center;
+            padding: 45px 20px;
+            line-height: 1.8;
+        }
+
+        .introduccion h2 {
+            color: #ffd166;
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .planetas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+            padding: 30px;
+            max-width: 1300px;
+            margin: auto;
+        }
+
+        .planeta {
+            background: #151f3e;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 18px rgba(0,0,0,.5);
+            transition: transform .3s;
+        }
+
+        .planeta:hover {
+            transform: translateY(-8px);
+        }
+
+        .planeta img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            background: #202b4a;
+        }
+
+        .contenido {
+            padding: 20px;
+        }
+
+        .contenido h2 {
+            color: #ffd166;
+            margin-bottom: 12px;
+        }
+
+        .contenido p {
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        .contenido ul {
+            padding-left: 20px;
+            line-height: 1.8;
+        }
+
+        .contenido li {
+            margin-bottom: 5px;
+        }
+
+        .curiosidades {
+            background: #111a36;
+            padding: 45px 25px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .curiosidades h2 {
+            color: #ffd166;
+            margin-bottom: 20px;
+        }
+
+        .curiosidades p {
+            max-width: 800px;
+            margin: 12px auto;
+            line-height: 1.7;
+        }
+
+        footer {
+            background: #050914;
+            text-align: center;
+            padding: 25px;
+            color: #bbb;
+        }
+
+        @media(max-width: 600px) {
+            header h1 {
+                font-size: 34px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 7px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1> EL SISTEMA SOLAR</h1>
+    <p>
+        Un viaje por el universo para conocer mas de nuestro planeta y de todos los planetas vecinos.
+    </p>
+</header>
+
+<nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#planetas">Los planetas</a>
+    <a href="#curiosidades">Curiosidades</a>
+</nav>
+
+<section class="introduccion" id="inicio">
+    <h2>¿Qué es el Sistema Solar?</h2>
+    <p>
+        El Sistema Solar es el conjunto de cuerpos celestes que giran
+        alrededor del Sol debido a su fuerza de gravedad.
+    </p>
+    <p> Está formado
+        por ocho planetas, sus lunas, planetas enanos, asteroides,
+        cometas y otros objetos espaciales.
+    </p>
+    <p>
+        El Sol es la estrella central y proporciona la luz y energía
+        necesarias para mantener la vida en la Tierra.
+    </p>
+</section>
+
+<section class="planetas" id="planetas">
+
+    <!-- MERCURIO -->
+    <div class="planeta">
+        <img src="https://images-assets.nasa.gov/image/PIA15162/PIA15162~orig.jpg"
+             alt="Planeta Mercurio">
+        <div class="contenido">
+            <h2>Mercurio</h2>
+            <p>Es el planeta más cercano al Sol y el más pequeño del Sistema Solar.</p>
+            <ul>
+                <li><b>Temperatura:</b> Extremadamente variable.</li>
+                <li><b>Superficie:</b> Rocosa y llena de cráteres.</li>
+                <li><b>Atmósfera:</b> Muy delgada.</li>
+                <li><b>Dato curioso:</b> No tiene lunas.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- VENUS -->
+    <div class="planeta">
+        <img src="https://images-assets.nasa.gov/image/PIA00104/PIA00104~orig.jpg"
+             alt="Planeta Venus">
+        <div class="contenido">
+            <h2>Venus</h2>
+            <p>Es el segundo planeta del Sol y el más caliente de todo el Sistema Solar.</p>
+            <ul>
+                <li><b>Temperatura:</b> Aproximadamente 465 °C.</li>
+                <li><b>Superficie:</b> Rocosa y volcánica.</li>
+                <li><b>Atmósfera:</b> Muy densa, rica en dióxido de carbono.</li>
+                <li><b>Dato curioso:</b> Gira en sentido contrario a la mayoría de los planetas.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- TIERRA -->
+    <div class="planeta">
+        <img src="https://images-assets.nasa.gov/image/PIA18033/PIA18033~orig.jpg"
+             alt="Planeta Tierra">
+        <div class="contenido">
+            <h2>Tierra</h2>
+            <p>Es nuestro hogar y el único planeta conocido que tiene vida.</p>
+            <ul>
+                <li><b>Temperatura:</b> Promedio global de aproximadamente 15 °C.</li>
+                <li><b>Superficie:</b> 71% cubierta de agua.</li>
+                <li><b>Atmósfera:</b> Rica en nitrógeno y oxígeno.</li>
+                <li><b>Dato curioso:</b> Tiene un satélite natural: la Luna.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- MARTE -->
+    <div class="planeta">
+        <img src="https://images-assets.nasa.gov/image/PIA04591/PIA04591~orig.jpg"
+             alt="Planeta Marte">
+        <div class="contenido">
+            <h2>Marte</h2>
+            <p>Es conocido como el planeta rojo por el óxido de hierro de su superficie.</p>
+            <ul>
+                <li><b>Temperatura:</b> Promedio de -65 °C.</li>
+                <li><b>Superficie:</b> Desértica y rocosa.</li>
+                <li><b>Atmósfera:</b> Delgada y rica en dióxido de carbono.</li>
+                <li><b>Dato curioso:</b> Tiene dos lunas: Fobos y Deimos.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- JÚPITER -->
+    <div class="planeta">
+        <img src="https://images-assets.nasa.gov/image/PIA02873/PIA02873~orig.jpg"
+             alt="Planeta Júpiter">
+        <div class="contenido">
+            <h2>Júpiter</h2>
+            <p>Es el planeta más grande del Sistema Solar y un gigante gaseoso.</p>
+            <ul>
+                <li><b>Temperatura:</b> Aproximadamente -110 °C en sus nubes.</li>
+                <li><b>Composición:</b> Principalmente hidrógeno y helio.</li>
+                <li><b>Atmósfera:</b> Presenta enormes tormentas.</li>
+                <li><b>Dato curioso:</b> Tiene una Gran Mancha Roja, una tormenta gigante.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SATURNO -->
+    <div class="planeta">
+        <img src="https://images-assets.nasa.gov/image/PIA02225/PIA02225~orig.jpg"
+             alt="Planeta Saturno">
+        <div class="contenido">
+            <h2>Saturno</h2>
+            <p>Es famoso por su impresionante sistema de anillos formados principalmente por hielo y roca.</p>
+            <ul>
+                <li><b>Temperatura:</b> Aproximadamente -140 °C en sus nubes.</li>
+                <li><b>Composición:</b> Hidrógeno y helio.</li>
+                <li><b>Atmósfera:</b> Muy extensa.</li>
+                <li><b>Dato curioso:</b> Sus anillos son los más espectaculares del Sistema Solar.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- URANO -->
+    <div class="planeta">
+        <img src="https://images-assets.nasa.gov/image/PIA18182/PIA18182~orig.jpg"
+             alt="Planeta Urano">
+        <div class="contenido">
+            <h2>Urano</h2>
+            <p>Es un gigante helado que destaca por su color azul verdoso.</p>
+            <ul>
+                <li><b>Temperatura:</b> Cerca de -195 °C en su atmósfera.</li>
+                <li><b>Composición:</b> Agua, amoníaco, metano y otros materiales.</li>
+                <li><b>Atmósfera:</b> Contiene hidrógeno, helio y metano.</li>
+                <li><b>Dato curioso:</b> Gira prácticamente de lado.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- NEPTUNO -->
+    <div class="planeta">
+        <img src="https://images-assets.nasa.gov/image/PIA01492/PIA01492~orig.jpg"
+             alt="Planeta Neptuno">
+        <div class="contenido">
+            <h2>Neptuno</h2>
+            <p>Es el planeta más lejano del Sol y destaca por su intenso color azul.</p>
+            <ul>
+                <li><b>Temperatura:</b> Cerca de -200 °C en su atmósfera.</li>
+                <li><b>Composición:</b> Gigante helado.</li>
+                <li><b>Atmósfera:</b> Hidrógeno, helio y metano.</li>
+                <li><b>Dato curioso:</b> Presenta vientos extremadamente rápidos.</li>
+            </ul>
+        </div>
+    </div>
+
+</section>
+
+<section class="curiosidades" id="curiosidades">
+    <h2> Curiosidades del Sistema Solar</h2>
+
+    <p> El Sol contiene aproximadamente el 99.86% de la masa de todo el Sistema Solar.</p>
+
+    <p> Júpiter es tan grande que podrían caber más de 1,300 Tierras en su interior.</p>
+
+    <p> La Tierra es el único planeta conocido con vida.</p>
+
+    <p> Neptuno tarda aproximadamente 165 años terrestres en completar una vuelta alrededor del Sol.</p>
+
+    <p> El Sistema Solar se encuentra dentro de la galaxia llamada Vía Láctea.</p>
+</section>
+
+<footer>
+    <p>EL SISTEMA SOLAR | Un viaje por el universo</p>
+    <p>2do Congreso de Ingenierias del FUTURO </p>
+    <p>Instituto Tecnologico Gustavo A Madero </p>
+</footer>
+
+</body>
+</html>
